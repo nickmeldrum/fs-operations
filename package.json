@@ -16,7 +16,7 @@
     "url": "https://github.com/nickmeldrum/fs-operations"
   },
   "engines": {
-    "node" : ">=7.10.1"
+    "node": ">=7.10.1"
   },
   "main": "src/index.js",
   "scripts": {
@@ -24,14 +24,19 @@
     "lint": "eslint src --fix",
     "test": "yarn lint && jest --coverage",
     "test-changed": "lint-staged && jest -o",
-    "watch": "jest --watch --notify --coverage"
+    "watch": "jest --watch --notify"
   },
   "jest": {
-    "collectCoverageFrom": [ "src/**/*.js" ],
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
     "coverageDirectory": "coverage"
   },
   "eslintConfig": {
-    "extends": ["airbnb-base", "plugin:prettier/recommended"],
+    "extends": [
+      "airbnb-base",
+      "plugin:prettier/recommended"
+    ],
     "env": {
       "node": true,
       "es6": true,
@@ -43,8 +48,12 @@
     "settings": {
       "import/resolver": {
         "node": {
-          "extensions": [".js"],
-          "paths": ["."]
+          "extensions": [
+            ".js"
+          ],
+          "paths": [
+            "."
+          ]
         }
       }
     }
@@ -65,7 +74,10 @@
     }
   },
   "lint-staged": {
-    "*.js": ["eslint --fix", "git add"]
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "devDependencies": {
     "eslint": "^5.15.1",
@@ -77,5 +89,8 @@
     "jest": "^24.1.0",
     "lint-staged": "^8.1.5",
     "prettier": "^1.16.4"
+  },
+  "dependencies": {
+    "fs-extra": "^7.0.1"
   }
 }
